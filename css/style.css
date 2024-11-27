@@ -1,6 +1,6 @@
 /* -------------------------------------------
 
-Name:       Plax
+Name:       Apel
 Version:    1.1
 Author:	    bslthemes
 Website:    https://bslthemes.com/
