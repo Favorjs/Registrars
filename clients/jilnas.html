@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+
+    <title>Apel Capital Registrars Limited</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="author" content="bslthemes" />
+
+    <!-- switzer font css -->
+    <link rel="stylesheet" href="/fonts/css/switzer.css" type="text/css" media="all">
+    <!-- font awesome css -->
+    <link rel="stylesheet" href="/fonts/css/font-awesome.min.css" type="text/css" media="all">
+    <!-- bootstrap grid css -->
+    <link rel="stylesheet" href="/css/plugins/bootstrap-grid.css" type="text/css" media="all">
+    <!-- swiper css -->
+    <link rel="stylesheet" href="/css/plugins/swiper.min.css" type="text/css" media="all">
+    <!-- magnific popup -->
+    <link rel="stylesheet" href="/css/plugins/magnific-popup.css" type="text/css" media="all">
+    <!-- Apel css -->
+    <link rel="stylesheet" href="/css/style.css" type="text/css" media="all">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/img/logo.png" type="image/x-icon">
+    <link rel="icon" href="/img/favicon.png" type="image/x-icon">
+
+</head>
+<style>
+
+/* General Reset */
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Container */
+.container2 {
+  display: flex;
+  align-items: flex-start; /* Align content at the top */
+  padding-left: 70px; /* Adds padding to the left */
+  gap: 20px; /* Adds spacing between side nav and main content */
+}
+
+/* Go Back Button */
+.go-back {
+  background-color: #f1f1f1;
+  padding: 10px 20px;
+  text-align: left;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky; /* Sticks to the top when scrolling */
+  top: 0;
+  z-index: 5000;
+  border-radius: 4px; /* Smooth edges */
+}
+
+.go-back a {
+  text-decoration: none;
+  color: #107b5f;
+  font-size: 16px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.go-back a:hover {
+  color: #2d702d;
+}
+
+/* Side Navigation */
+.side-nav {
+  width: 250px;
+  background-color: #107b5f;
+  color: white;
+  padding: 20px 0;
+  position: sticky;
+  top: 50px; /* Adjusted to prevent overlap with Go Back button */
+  height: fit-content;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.side-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.side-nav ul li {
+  margin: 10px 0;
+}
+
+.side-nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  padding: 10px 20px;
+  display: block;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.side-nav ul li a:hover {
+  background-color: #2d702d;
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  padding: 20px;
+}
+
+.main-content section {
+  margin-bottom: 40px;
+}
+
+.main-content section h2 {
+  font-size: 24px;
+  color: #107b5f;
+  margin-bottom: 10px;
+}
+
+/* Download Section */
+.download-section {
+  display: flex;
+  flex-wrap: wrap; /* Ensures buttons wrap to the next row if necessary */
+  gap: 10px; /* Space between buttons */
+  margin-top: 10px;
+}
+
+.download-section a {
+  padding: 8px 12px;
+  background-color: #107b5f;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.download-section a:hover {
+  background-color: #2d702d;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+  .container2 {
+    padding-left: 30px; /* Reduce padding on larger tablets */
+    gap: 10px;
+  }
+
+  .side-nav {
+    width: 220px; /* Slightly narrower nav for tablets */
+  }
+
+  .main-content {
+    padding: 15px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container2 {
+    flex-direction: column; /* Stack side nav and content vertically */
+    padding-left: 0;
+    gap: 0;
+  }
+
+  .side-nav {
+    width: 100%; /* Full width for smaller screens */
+    position: relative; /* Remove sticky behavior */
+  }
+
+  .main-content {
+    padding: 10px;
+  }
+
+  .download-section a {
+    font-size: 12px;
+    padding: 6px 10px; /* Smaller padding for smaller screens */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .go-back a {
+    font-size: 14px; /* Adjust Go Back button font size */
+  }
+
+  .main-content section h2 {
+    font-size: 20px; /* Adjust heading size */
+  }
+
+  .download-section {
+    gap: 5px; /* Reduce gap between buttons */
+  }
+
+  .download-section a {
+    padding: 5px 8px;
+    font-size: 10px;
+  }
+}
+
+
+
+
+</style>
+
+
+<body>
+
+
+    <!-- wrapper -->
+    <div id="smooth-wrapper" class="mil-wrapper">
+
+
+        <!-- scroll progress -->
+        <div class="mil-progress-track">
+            <div class="mil-progress"></div>
+        </div>
+        <!-- scroll progress end -->
+
+        <!-- back to top -->
+        <div class="progress-wrap active-progress"></div>
+
+        <!-- top panel end -->
+        <div class="mil-top-panel">
+            <div class="container">
+                <a href="index.html" class="mil-logo">
+                    <img src="/img/logo.png"  width="62%">
+                </a>
+                <nav class="mil-top-menu">
+                    <ul>
+                        <li class="mil-has-children mil-active">
+                        <li>
+                            <a href="/index.html">Home</a>
+                        </li>
+                        </li>
+                        <li>
+                            <a href="/about.html">About</a>
+                        </li>
+                        <li class="mil-has-children">
+                            <a >Services</a>
+
+                            <ul>
+                                <li><a href="/services/primary-market.html">Primary Market Services</a></li>
+                                <li><a href="/services/investor-relations.html">Investor Relations</a></li>
+                                <li><a href="/services/post-primary.html">Post Primary Market Services</a></li>
+                                <li><a href="/services/employee-share.html">Employee Share Plan</a></li>
+                                <li><a href="/services/e-fund.html">E-Fund Application</a></li>
+                                <li><a href="/services/customer-experience.html">Customer Experience</a></li>
+                                <li><a href="/services/drip.html">Dividend Reinvestment Plan (DRIP)</a></li>
+                                
+                            </ul>
+                        </li>
+                        <li class="mil-has-children">
+                            <a>Hub</a>
+                            <ul>
+                                <li><a href="/forms.html">E-Forms</a></li>
+                                <li><a href="/clients.html">Clients</a></li>
+                                <li><a href="/blog.html">Publications</a></li>
+                                <li>
+                                    <a href="/faq.html">Faq</a>
+                                </li>
+                            </ul>
+                        </li>
+                       
+                         <li class="mil-has-children">
+                            <a href="#.">e-Solutions</a>
+                            <ul>
+                                <li><a href="https://products.apel.com.ng/apel/form/SHAREHOLDERUPDATEFORM2/formperma/V3RrdoyzkSqo2QT4nL2UxyJrU9WfWVPmFg6xMuDnxB4" target="_blank">KYC Update</a></li>
+                                <li><a href="https://myapel.com" target="_blank">Shareholder Portal</a></li>
+                               <li><a href="https://sites.google.com/apelasset.com/dividendsearch/home" target="_blank">E-dividend Search</a></li>
+                                <li><a href="" target="_blank">AGM or EGM Accreditation</a></li>
+                          
+                                
+                            </ul>
+                        </li>
+                          <li class="mil-has-children">
+                            <a>Contact</a>
+                            <ul>
+                                <li><a href="/contact.html">Contact us</a></li>
+                                <li><a href="/whistle.html">Whistleblow</a></li>
+                               
+                                
+                            </ul>
+
+                        </li>
+                   
+                    </ul>
+                </nav>
+                <div class="mil-menu-buttons">
+                    <a href="register.html" class="mil-btn mil-sm">Sign up</a>
+                    <div class="mil-menu-btn">
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- top panel end -->
+        <!-- content -->
+        <div id="smooth-content">
+
+            <!-- banner -->
+            <div class="mil-banner mil-banner-inner mil-dissolve">
+                <div class="container">
+                    <div class="row align-items-center justify-content-center">
+                        <div class="col-xl-8">
+                            <div class="mil-banner-text mil-text-center">
+                                <div class="mil-text-m mil-mb-20">Clients</div>
+                                <h1 class="mil-mb-60">JILNAS</h1>
+                                <ul class="mil-breadcrumbs mil-center">
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="blog.html">Clients</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- banner end -->
+            <div class="container2">
+
+                <div class="go-back">
+                    <a href="/clients.html">← Go Back</a>
+                  </div>
+                <!-- Side Navigation -->
+                <nav class="side-nav">
+                  <ul>
+                    <li><a href="#annual-reports">Annual Report</a></li>
+                    <li><a href="#egm-actions">EGM Reports</a></li>
+                    <li><a href="#proxy-forms">Proxy Forms</a></li>
+                    <li><a href="#agm-notices">AGM Notices</a></li>
+                    <li><a href="#egm-notices">EGM Notices</a></li>
+                    <li><a href="#explanatory-note">Explanatory Note</a></li>
+                    <li><a href="#right-issue">Rights Issue</a></li>
+                    <li><a href="#bonus-history">Bonus History</a></li>
+                  </ul>
+                </nav>
+            
+                <!-- Main Content -->
+                <main class="main-content">
+                  <section id="annual-reports">
+                    <h2>Annual Reports</h2>
+                    <p>Details about annual reports, financial statements, and other company reports.</p>
+                    <div class="download-section">
+                      <a href="documents/annual-report.pdf" download>2024</a>
+                      <a href="documents/financial-statement.pdf" download>2023</a>
+                    </div>
+                  </section>
+            
+                  <section id="egm-actions">
+                    <h2>EGM reports</h2>
+                    <p></p>
+                    <div class="download-section">
+                        <a href="documents/annual-report.pdf" download>2024</a>
+                        <a href="documents/financial-statement.pdf" download>2023</a>
+                    </div>
+                  </section>
+            
+                  <section id="proxy-forms">
+                    <h2>Proxy Forms</h2>
+                    <p>Downloadable proxy forms for shareholders.</p>
+                    <div class="download-section">
+                        <a href="documents/annual-report.pdf" download>2024</a>
+                        <a href="documents/financial-statement.pdf" download>2023</a>
+                    </div>
+                  </section>
+            
+                  <section id="agm-notices">
+                    <h2>AGM Notices</h2>
+                    <p>Official notices issued by the company for shareholders.</p>
+                    <div class="download-section">
+                        <a href="documents/annual-report.pdf" download>2024</a>
+                        <a href="documents/financial-statement.pdf" download>2023</a>
+                    </div>
+                  </section>
+                  <section id="egm-notices">
+                    <h2>EGM Notices</h2>
+                    <p>Official notices issued by the company for shareholders.</p>
+                    <div class="download-section">
+                        <a href="documents/annual-report.pdf" download>2024</a>
+                        <a href="documents/financial-statement.pdf" download>2023</a>
+                    </div>
+                  </section>
+            
+            
+            
+                  <section id="explanatory-note">
+                    <h2>Explanatory Note</h2>
+                    <p>Explanations and additional details regarding specific actions or notices.</p>
+                    <div class="download-section">
+                        <a href="documents/annual-report.pdf" download>2024</a>
+                        <a href="documents/financial-statement.pdf" download>2023</a>
+                    </div>
+                  </section>
+            
+                  <section id="right-issue">
+                    <h2>Right Issue</h2>
+                    <p>Details regarding rights issue offered by the company.</p>
+                    <div class="download-section">
+                        <a href="documents/annual-report.pdf" download>2024</a>
+                        <a href="documents/financial-statement.pdf" download>2023</a>
+                    </div>
+                  </section>
+            
+                  <section id="bonus-history">
+                    <h2>Bonus History</h2>
+                    <p>A history of bonus issues declared by the company.</p>
+                    <div class="download-section">
+                        <a href="documents/annual-report.pdf" download>2024</a>
+                        <a href="documents/financial-statement.pdf" download>2023</a>
+                    </div>
+                  </section>
+                </main>
+              </div>
+            <!-- footer -->
+           <footer >
+                <div class="container">
+                    <div class="row" >
+                        <div class="col-xl-3" >
+                            <a href="#." class="mil-footer-logo mil-mb-60">
+                                <img src="/img/logo.png" alt="Apel" width="50%">
+                            </a>
+                        </div>
+                        <div class="col-xl-3 mil-mb-60">
+                            <h6 class="mil-mb-60">Usefull Links</h6>
+                            <ul class="mil-footer-list">
+                                <li class="mil-text-m mil-soft mil-mb-15">
+                                    <a href="index.html">Home</a>
+                                </li>
+                                <li class="mil-text-m mil-soft mil-mb-15">
+                                    <a href="about.html">About Us</a>
+                                </li>
+                                <li class="mil-text-m mil-soft mil-mb-15">
+                                    <a href="contact.html">Contact Us</a>
+                                </li>
+                                <li class="mil-text-m mil-soft mil-mb-15">
+                                    <a >Services</a>
+                                </li>
+                                <li class="mil-text-m mil-soft mil-mb-15">
+                                    <a href="faq.html">Faq</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-xl-3 mil-mb-60">
+                            <h6 class="mil-mb-60">Help</h6>
+                            <ul class="mil-footer-list">
+                                <li class="mil-text-m mil-soft mil-mb-15">
+                                    6 Alhaji Bashorun Street, off Norman Williams Crescent South-West Ikoyi <br> Lagos
+                                </li>
+                                <li class="mil-text-m mil-soft mil-mb-15">
+                                    (+234) 704 627 7071
+                                </li>
+                                <li class="mil-text-m mil-soft mil-mb-15">
+                                    registrars@apel.com.ng
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-xl-3 mil-mb-80">
+                            <h6 class="mil-mb-60">Newsletter</h6>
+                            <p class="mil-text-xs mil-soft mil-mb-15">Subscribe to get the latest news form us</p>
+                            <form class="mil-subscripe-form-footer">
+                                <input class="mil-input" type="email" placeholder="Email">
+                                <button type="submit"><i class="far fa-envelope-open mil-dark"></i></button>
+                                <div class="mil-checkbox-frame mil-mt-15">
+                                    <div class="mil-checkbox">
+                                        <input type="checkbox" id="checkbox" checked>
+                                        <label for="checkbox"></label>
+                                    </div>
+                                    <p class="mil-text-xs mil-soft">Subscribe to get the latest news</p>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="mil-footer-bottom">
+                        <div class="row">
+                            <div class="col-xl-6">
+                                <p class="mil-text-s mil-soft">© 2024 Apel Capital Registrars</p>
+                            </div>
+                            <div class="col-xl-6">
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <!-- footer end -->
+
+        </div>
+        <!-- content end -->
+    </div>
+    <!-- wrapper end -->
+
+
+    <!-- jquery js -->
+    <script src="/js/plugins/jquery.min.js"></script>
+
+    <!-- swiper css -->
+    <script src="/js/plugins/swiper.min.js"></script>
+    <!-- gsap js -->
+    <script src="/js/plugins/gsap.min.js"></script>
+    <!-- scroll smoother -->
+    <script src="/js/plugins/ScrollSmoother.min.js"></script>
+    <!-- scroll trigger js -->
+    <script src="/js/plugins/ScrollTrigger.min.js"></script>
+    <!-- scroll to js -->
+    <script src="/js/plugins/ScrollTo.min.js"></script>
+    <!-- magnific -->
+    <script src="/js/plugins/magnific-popup.js"></script>
+    <!-- Apel js -->
+    <script src="/js/main.js"></script>
+
+</body>
+
+</html>
