@@ -32,11 +32,11 @@
 
 <style>
     body {
-      font-family: Arial, sans-serif;
+      
       margin: 0;
       padding: 0;
-      background-color: #f2f9f2;
-      color: #2d602d;
+      background-color: #fFF;
+      color: #FFF;
     }
     .header {
       text-align: center;
@@ -61,6 +61,7 @@
       padding: 10px;
       transition: transform 0.3s, box-shadow 0.3s;
       
+      
      
     }
     .client-card:hover {
@@ -76,7 +77,9 @@
     .client-card h3 {
       font-size: 13px;
       margin: 10px 0 0;
+
     }
+
 
     /* Adjustments for smaller screens */
     @media (max-width: 1200px) {
@@ -113,7 +116,23 @@
         <div class="progress-wrap active-progress"></div>
 
         <!-- top panel end -->
-        <div class="mil-top-panel">
+           <div class="mil-preheader">
+        <div class="container">
+            <div class="mil-contact-info">
+                <span><i class="fas fa-phone-alt"></i> 07046126698</span>
+                <span><i class="fas fa-envelope"></i> registrars@apel.ng</span>
+            </div>
+            <div class="mil-social-icons">
+                <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://x.com/apelng" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/apelng" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/company/apelng/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </div>
+    
+        <!-- top panel end -->
+          <div class="mil-top-panel">
             <div class="container">
                 <a href="index.html" class="mil-logo">
                     <img src="img/logo.png"  width="62%">
@@ -125,24 +144,32 @@
                             <a href="index.html">Home</a>
                         </li>
                         </li>
-                        <li>
-                            <a href="about.html">About</a>
+                        <li class="mil-has-children">
+                            <a>About</a>
+                            <ul>
+                                <li><a href="about.html#history">History</a></li>
+                                <li><a href="about.html#pride">Pride</a></li>
+                                <li><a href="about.html#whoweare">Who we are</a></li>
+                                <li><a href="about.html#whychooseus">Why Choose Us</a></li>
+                                <li><a href="about.html#meetus">Meet Us</a></li>
+                             
+                            </ul>
                         </li>
                         <li class="mil-has-children">
                             <a >Services</a>
 
                             <ul>
-                                <li><a href="primary-market.html">Primary Market Services</a></li>
-                                <li><a href="investor-relations.html">Investor Relations</a></li>
-                                <li><a href="post-primary.html">Post Primary Market Services</a></li>
-                                <li><a href="employee-share.html">Employee Share Plan</a></li>
-                                <li><a href="e-fund.html">E-Fund Application</a></li>
-                                <li><a href="customer-experience.html">Customer Experience</a></li>
-                                <li><a href="drip.html">Dividend Reinvestment Plan (DRIP)</a></li>
+                                <li><a href="services/primary-market.html">Primary Market Services</a></li>
+                                <li><a href="services/investor-relations.html">Investor Relations</a></li>
+                                <li><a href="services/post-primary.html">Post Primary Market Services</a></li>
+                                <li><a href="services/employee-share.html">Employee Share Plan</a></li>
+                                <li><a href="services/e-fund.html">E-Fund Application</a></li>
+                                <li><a href="services/customer-experience.html">Customer Experience</a></li>
+                                <li><a href="services/drip.html">Dividend Reinvestment Plan (DRIP)</a></li>
                                 
                             </ul>
                         </li>
-                        <li class="mil-has-children">
+                        <li class="mil-has-children mil-active">
                             <a>Hub</a>
                             <ul>
                                 <li><a href="forms.html">E-Forms</a></li>
@@ -154,7 +181,7 @@
                             </ul>
                         </li>
                        
-                        <li class="mil-has-children">
+                         <li class="mil-has-children">
                             <a href="#.">e-Solutions</a>
                             <ul>
                                 <li><a href="https://products.apel.com.ng/apel/form/SHAREHOLDERUPDATEFORM2/formperma/V3RrdoyzkSqo2QT4nL2UxyJrU9WfWVPmFg6xMuDnxB4" target="_blank">KYC Update</a></li>
@@ -294,165 +321,41 @@
 
 
 const clientsData = [
-  { 
-    name: "ADAS PROGRAMME LIMITED", 
-    logo: "img/clients/adas.png", 
-    link: "clients/adas.html" 
-  },
-  { 
-    name: "AIICO BALANCED FUND", 
-    logo: "img/clients/aiico.png", 
-    link: "clients/aiico.html" 
-  },
-  { 
-    name: "ANINO INTERNATIONAL PLC", 
-    logo: "img/clients/anino.png", 
-    link: "clients/anino.html" 
-  },
-  { 
-    name: "ARBICO PLC", 
-    logo: "img/clients/arbico.png", 
-    link: "clients/arbico.html" 
-  },
-  { 
-    name: "CALIPHATE SUKUK SPV LIMITED", 
-    logo: "img/clients/caliphate.png", 
-    link: "clients/caliphate.html" 
-  },
-  { 
-    name: "CHAPELHILL MONEY MARKET FUND", 
-    logo: "img/clients/chapelhill.png", 
-    link: "clients/chapelhill.html" 
-  },
-  { 
-    name: "CITITRUST FINANCIAL SERVICES PLC", 
-    logo: "img/clients/Cititrust.jpeg", 
-    link: "clients/cititrust.html" 
-  },
-  { 
-    name: "EUNISELL INTERLINKED TECHNOLOGIES PLC", 
-    logo: "img/clients/eunisell.png", 
-    link: "clients/eunisell.html" 
-  },
-  { 
-    name: "INTERNATIONAL BREWERIES PLC", 
-    logo: "img/clients/intbrew.png", 
-    link: "clients/intbrew.html" 
-  },
-  { 
-    name: "JEWEL SUKUK SPV LIMITED", 
-    // logo: "img/clients/jewel.png", 
-    link: "clients/jewel.html" 
-  },
-  { 
-    name: "JILNAS NIGERIA LIMITED", 
-    logo: "img/clients/jilnas.png", 
-    link: "clients/jilnas.html" 
-  },
-  { 
-    name: "KSIP FUNDING SPV LIMITED 1", 
-    logo: "img/clients/kano.jpg", 
-    link: "clients/kano.html" 
-  },
-  { 
-    name: "LAGOS COMMODITIES AND FUTURES EXCHANGE", 
-    logo: "img/clients/Lagos-commodities.jpeg", 
-    link: "clients/lcfe.html" 
-  },
-  { 
-    name: "LASACO ASSURANCE PLC", 
-    logo: "img/clients/lasaco.png", 
-    link: "clients/lasaco.html" 
-  }, { 
-    name: "MAITAMA AMUSEMENT PARK", 
-    logo: "img/clients/maitama.png", 
-    link: "clients/maitama.html" 
-  },
-  { 
-    name: "MAHFAS INVESTMENT LIMITED", 
-    logo: "img/clients/MAHFAS.png", 
-    link: "clients/mahfas.html" 
-  },
-  { 
-    name: "MANZ SPV LIMITED", 
-    // logo: "img/clients/.png", 
-    link: "clients/manz.html" 
-  },
-  { 
-    name: "MASS TELECOM INNOVATION PLC", 
-    logo: "img/clients/mti.png", 
-    link: "clients/mti.html" 
-  },
-  { 
-    name: "METAL SECURITY PRODUCTS LIMITED", 
-    // logo: "img/clients/.png", 
-    link: "clients/metal-sec.html" 
-  },
-  { 
-    name: "MODERN SHELTER SYSTEM AND SERVICES BOND", 
-    // logo: "img/clients/.png", 
-    link: "clients/metal-sec.html" 
-  },
-  { 
-    name: "MUTUAL BENEFITS ASSURANCE PLC", 
-    logo: "img/clients/Mutual-benefit.png", 
-    link: "clients/mbenefit.html" 
-  },
-  { 
-    name: "MUTUAL TRUST MICROFINANCE BANK LIMITED", 
-    logo: "img/clients/MUTUAL-Trust.png", 
-    link: "clients/mutual-trust.html" 
-  },
-  { 
-    name: "NCR", 
-    logo: "img/clients/ncr.png", 
-    link: "clients/ncr.html" 
-  },
-  { 
-    name: "NEM INSURANCE PLC", 
-    logo: "img/clients/NEM.png", 
-    link: "clients/nem.html" 
-  },
-  { 
-    name: "NIGERIA REINSURANCE CORPORATIONS", 
-    logo: "img/clients/NIG-REINSURANCE.png", 
-    link: "clients/nig-re.html" 
-  },
-  { 
-    name: "OGC FOODS AND BEVERAGES LIMITED", 
-    logo: "img/clients/ogc.jpg", 
-    link: "clients/ogc.html" 
-  },
-  { 
-    name: "PARAMOUNT EQUITY FUND", 
-    logo: "img/clients/paramount.jpeg", 
-    link: "clients/paramount.html" 
-  },
-  { 
-    name: "PHARMADEKO PLC", 
-    logo: "img/clients/NIG-REINSURANCE.png", 
-    link: "clients/pharmadeko.html" 
-  },
-  { 
-    name: "REDSTAR EXPRESS PLC", 
-    logo: "img/clients/redstar.png", 
-    link: "clients/redstar.html" 
-  },
-  { 
-    name: "SKYWAY AVIATION HANDLING COMPANY PLC", 
-    logo: "img/clients/sacho.png", 
-    link: "clients/sacho.html" 
-  },
-  { 
-    name: "VITAL PRODUCTS PLC", 
-    logo: "img/clients/tajbank.png", 
-    link: "clients/taj.html" 
-  },
-  { 
-    name: "VITAL PRODUCTS PLC", 
-    logo: "img/clients/vital.png", 
-    link: "clients/vital.html" 
-  }
+
+  { "name": "Adas Programme Limited", "link": "clients/adas.html" },
+  { "name": "Aiico Balanced Fund", "logo": "img/clients/aiico.png", "link": "clients/aiico.html" },
+  { "name": "Anino International Plc", "logo": "img/clients/anino.png", "link": "clients/anino.html" },
+  { "name": "Arbico Plc", "logo": "img/clients/arbico.png", "link": "clients/arbico.html" },
+  { "name": "Caliphate Sukuk SPV Limited", "logo": "img/clients/caliphate.png", "link": "clients/caliphate.html" },
+  { "name": "Chapelhill Money Market Fund", "logo": "img/clients/chapelhill.png", "link": "clients/chapelhill.html" },
+  { "name": "Cititrust Financial Services Plc", "logo": "img/clients/Cititrust.jpeg", "link": "clients/cititrust.html" },
+  { "name": "Eunisell Interlinked Technologies Plc", "logo": "img/clients/eunisell.png", "link": "clients/eunisell.html" },
+  { "name": "International Breweries Plc", "logo": "img/clients/intbrew.png", "link": "clients/intbrew.html" },
+  { "name": "Jewel Sukuk SPV Limited", "link": "clients/jewel.html" },
+  { "name": "Jilnas Nigeria Limited", "logo": "img/clients/jilnas.png", "link": "clients/jilnas.html" },
+  { "name": "KSIP Funding SPV Limited 1", "logo": "img/clients/kano.jpg", "link": "clients/kano.html" },
+  { "name": "Lagos Commodities And Futures Exchange", "logo": "img/clients/Lagos-commodities.jpeg", "link": "clients/lcfe.html" },
+  { "name": "Lasaco Assurance Plc", "logo": "img/clients/lasaco.png", "link": "clients/lasaco.html" },
+  { "name": "Maitama Amusement Park", "logo": "img/clients/maitama.png", "link": "clients/maitama.html" },
+  { "name": "Mahfas Investment Limited", "logo": "img/clients/MAHFAS.png", "link": "clients/mahfas.html" },
+  { "name": "Manz SPV Limited", "link": "clients/manz.html" },
+  { "name": "Mass Telecom Innovation Plc", "logo": "img/clients/mti.png", "link": "clients/mti.html" },
+  { "name": "Metal Security Products Limited", "link": "clients/metal-sec.html" },
+  { "name": "Modern Shelter System And Services Bond", "link": "clients/metal-sec.html" },
+  { "name": "Mutual Benefits Assurance Plc", "logo": "img/clients/Mutual-benefit.png", "link": "clients/mbenefit.html" },
+  { "name": "Mutual Trust Microfinance Bank Limited", "logo": "img/clients/MUTUAL-Trust.png", "link": "clients/mutual-trust.html" },
+  { "name": "NCR Nigerian Plc", "logo": "img/clients/ncr.png", "link": "clients/ncr.html" },
+  { "name": "NEM Insurance Plc", "logo": "img/clients/NEM.png", "link": "clients/nem.html" },
+  { "name": "Nigeria Reinsurance Corporations", "logo": "img/clients/NIG-REINSURANCE.png", "link": "clients/nig-re.html" },
+  { "name": "OGC Foods And Beverages Limited", "logo": "img/clients/ogc.jpg", "link": "clients/ogc.html" },
+  { "name": "Paramount Equity Fund", "logo": "img/clients/paramount.jpeg", "link": "clients/paramount.html" },
+  { "name": "Pharmadeko Plc", "logo": "img/clients/NIG-REINSURANCE.png", "link": "clients/pharmadeko.html" },
+  { "name": "Redstar Express Plc", "logo": "img/clients/redstar.png", "link": "clients/redstar.html" },
+  { "name": "Skyway Aviation Handling Company Plc", "logo": "img/clients/sacho.png", "link": "clients/sacho.html" },
+  { "name": "Vital Products Plc", "logo": "img/clients/tajbank.png", "link": "clients/taj.html" },
+  { "name": "Vital Products Plc", "logo": "img/clients/vital.png", "link": "clients/vital.html" }
+
+
 ];
 
 const clientsContainer = document.getElementById('clients');
@@ -463,7 +366,7 @@ clientsData.forEach(client => {
 
   clientCard.innerHTML = `
     <a href="${client.link}" target="_blank" rel="noopener noreferrer">
-      <img src="${client.logo}" alt="${client.name} Logo">
+
       <h3>${client.name}</h3>
     </a>
   `;

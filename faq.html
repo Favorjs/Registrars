@@ -28,7 +28,96 @@
     <link rel="icon" href="img/favicon.png" type="image/x-icon">
 
 </head>
-
+<style>
+    /* Simplified Sidebar Styles */
+    .sidebar {
+        position: fixed;
+        top: 20%;
+        left: 0;
+        width: 200px;
+        height: auto;
+        background-color: white; /* No background color */
+        padding: 0; /* No padding */
+        margin-left: 10px;
+        font-size: 17px;
+        border-right: 1px solid #e0e0e0; /* Light border to separate sidebar */
+    }
+    
+    .sidebar h3 {
+        margin: 20px 15px;
+        font-size: 16px;
+        color: rgb(13, 81, 82);
+    }
+    
+    .sidebar a {
+        display: block;
+        text-decoration: none;
+        color: rgb(13, 81, 82);
+        padding: 10px 15px;
+        border-bottom: 1px solid #f0f0f0;
+        transition: all 0.3s ease-in-out;
+    }
+    
+    .sidebar a:hover {
+        background-color: #f9f9f9;
+        color: #000;
+    }
+    
+    /* Content Area */
+    .container {
+        margin-left: 50px; /* Adjust content for sidebar width */
+        padding: 20px;
+        font-family: Arial, sans-serif;
+    }
+    
+    h2 {
+        font-size: 40px;
+        color: rgb(13, 81, 82);
+    }
+    
+    p {
+        font-size: 14px;
+        color: rgb(13, 81, 82);
+        line-height: 1.6;
+    }
+    
+    /* Responsive Design */
+    @media screen and (max-width: 1024px) {
+        .sidebar {
+            position: relative;
+            width: 100%;
+            margin-left: 0;
+            border-right: none;
+        }
+    
+        .container {
+            margin-left: 0;
+            padding-top: 20px;
+        }
+    }
+    
+    /* Mobile-Friendly */
+    @media screen and (max-width: 768px) {
+        .sidebar {
+            width: 100%;
+            position: static;
+        }
+    
+        .container {
+            margin-left: 0;
+            padding-top: 20px;
+        }
+    
+        h2 {
+            font-size: 28px;
+        }
+    
+        p {
+            font-size: 13px;
+        }
+    }
+    </style>
+    
 <body>
 
 
@@ -47,7 +136,23 @@
         <div class="progress-wrap active-progress"></div>
 
         <!-- top panel end -->
-            <div class="mil-top-panel">
+               <!-- <div class="mil-preheader">
+        <div class="container">
+            <div class="mil-contact-info">
+                <span><i class="fas fa-phone-alt"></i> 07046126698</span>
+                <span><i class="fas fa-envelope"></i> registrars@apel.ng</span>
+            </div>
+            <div class="mil-social-icons">
+                <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://x.com/apelng" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/apelng" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/company/apelng/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </div>
+     -->
+        <!-- top panel end -->
+          <div class="mil-top-panel">
             <div class="container">
                 <a href="index.html" class="mil-logo">
                     <img src="img/logo.png"  width="62%">
@@ -59,24 +164,32 @@
                             <a href="index.html">Home</a>
                         </li>
                         </li>
-                        <li>
-                            <a href="about.html">About</a>
+                        <li class="mil-has-children">
+                            <a>About</a>
+                            <ul>
+                                <li><a href="about.html#history">History</a></li>
+                                <li><a href="about.html#pride">Pride</a></li>
+                                <li><a href="about.html#whoweare">Who we are</a></li>
+                                <li><a href="about.html#whychooseus">Why Choose Us</a></li>
+                                <li><a href="about.html#meetus">Meet Us</a></li>
+                             
+                            </ul>
                         </li>
                         <li class="mil-has-children">
                             <a >Services</a>
 
                             <ul>
-                                <li><a href="primary-market.html">Primary Market Services</a></li>
-                                <li><a href="investor-relations.html">Investor Relations</a></li>
-                                <li><a href="post-primary.html">Post Primary Market Services</a></li>
-                                <li><a href="employee-share.html">Employee Share Plan</a></li>
-                                <li><a href="e-fund.html">E-Fund Application</a></li>
-                                <li><a href="customer-experience.html">Customer Experience</a></li>
-                                <li><a href="drip.html">Dividend Reinvestment Plan (DRIP)</a></li>
+                                <li><a href="services/primary-market.html">Primary Market Services</a></li>
+                                <li><a href="services/investor-relations.html">Investor Relations</a></li>
+                                <li><a href="services/post-primary.html">Post Primary Market Services</a></li>
+                                <li><a href="services/employee-share.html">Employee Share Plan</a></li>
+                                <li><a href="services/e-fund.html">E-Fund Application</a></li>
+                                <li><a href="services/customer-experience.html">Customer Experience</a></li>
+                                <li><a href="services/drip.html">Dividend Reinvestment Plan (DRIP)</a></li>
                                 
                             </ul>
                         </li>
-                        <li class="mil-has-children">
+                        <li class="mil-has-children mil-active">
                             <a>Hub</a>
                             <ul>
                                 <li><a href="forms.html">E-Forms</a></li>
@@ -88,7 +201,7 @@
                             </ul>
                         </li>
                        
-                        <li class="mil-has-children">
+                         <li class="mil-has-children">
                             <a href="#.">e-Solutions</a>
                             <ul>
                                 <li><a href="https://products.apel.com.ng/apel/form/SHAREHOLDERUPDATEFORM2/formperma/V3RrdoyzkSqo2QT4nL2UxyJrU9WfWVPmFg6xMuDnxB4" target="_blank">KYC Update</a></li>
@@ -135,57 +248,356 @@
                                 <p class="mil-text-m mil-soft mil-mb-60 mil-up">Find quick and clear answers to the most common <br>questions about Apel</p>
                             </div>
 
-                            <div class="mil-accordion">
+                            <div class="sidebar">
+                                <h3>FAQ Topics</h3>
+                                <a href="#dividend">Dividend</a>
+                                <a href="#certificates">Certificates</a>
+                                <a href="#genShareholding">General Shareholding</a>
+                                <a href="#genmeetings">General Meetings</a>
+                                <a href="#rightsissue">Rights Issue</a>
+                            </div>
+                            
+                            <h2 id="dividend">Dividend</h2>
+                            <div class="mil-accordion" >
 
                                 <div class="mil-accordion-group mil-up">
                                     <div class="mil-accordion-menu">
-                                        <h5>How can I send money with Apel?</h5>
+                                        <h5>What is a dividend?</h5>
 
                                         <div class="mil-accordion-icon"><i class="fas fa-chevron-up"></i></div>
 
                                     </div>
                                     <div class="mil-accordion-content">
-                                        <p class="mil-text-m mil-soft">Discover the step-by-step process to make money transfers easily and securely with Apel.
+                                        <p class="mil-text-m mil-soft">A dividend is a profit given or shared to the owners of a particular company (shareholders) as profit payment and they are usually paid when a company keeps a portion of its earnings to reinvest in the prospect of its business when approved by the shareholders at the Annual General Meeting.
                                             <br><br>
-                                            When I hear the buzz of the little world among the stalks, and grow familiar with the countless indescribable forms of the insects and flies, then I feel the presence of the Almighty, who formed us in his own image, and the breath
+                                           
                                         </p>
                                     </div>
                                 </div>
 
                                 <div class="mil-accordion-group mil-up">
                                     <div class="mil-accordion-menu">
-                                        <h5>What security measures does Apel have to protect my transactions?</h5>
+                                        <h5>I have not receive any dividend since I bought this shares. What can I do?</h5>
 
                                         <div class="mil-accordion-icon"><i class="fas fa-chevron-up"></i></div>
                                     </div>
                                     <div class="mil-accordion-content">
-                                        <p class="mil-text-m mil-soft">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore assumenda mollitia magni quisquam incidunt necessitatibus error delectus commodi ad exercitationem, dolorem iusto placeat pariatur et aspernatur totam sapiente similique voluptatem quae sunt iste officia sint laborum eum, eos. Molestias modi aliquam accusamus dolore. Mollitia quod omnis ea fugit rem nesciunt ad provident ratione, culpa ex laudantium, enim sit ut eius.</p>
+                                        <p class="mil-text-m mil-soft">Kindly download our e-mandate form on our website or contact us by e-mail, registrars@apel.com.ng to request for a mandate form, fill out the form and drop at any branch of your bank or bring the original copy to our office.</p>
                                     </div>
                                 </div>
 
                                 <div class="mil-accordion-group mil-up">
                                     <div class="mil-accordion-menu">
-                                        <h5>What is the coverage of the Apel network?</h5>
+                                        <h5>Dividend cheque has been lost or stolen. How can I get a new one?</h5>
 
                                         <div class="mil-accordion-icon"><i class="fas fa-chevron-up"></i></div>
                                     </div>
                                     <div class="mil-accordion-content">
-                                        <p class="mil-text-m mil-soft">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+                                        <p class="mil-text-m mil-soft">If your warrant is stale or stolen, kindly visit our website to download our e-mandate form complete the downloaded form, drop at any branch of your bank or contact us at registrars@apel.com.ng.</p>
                                     </div>
                                 </div>
 
                                 <div class="mil-accordion-group mil-up">
                                     <div class="mil-accordion-menu">
-                                        <h5>How can I contact Apel customer service?</h5>
+                                        <h5>Can I have my dividends paid straight to my bank account?</h5>
 
                                         <div class="mil-accordion-icon"><i class="fas fa-chevron-up"></i></div>
                                     </div>
                                     <div class="mil-accordion-content">
-                                        <p class="mil-text-m mil-soft">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat quo ullam maiores reiciendis, voluptatibus quae odio, accusamus facere vero consectetur! Omnis nobis voluptatum deserunt maxime, error dolor nulla, perspiciatis assumenda quisquam, fugiat magnam placeat culpa sit reprehenderit nesciunt quis praesentium! Quam ullam tempora quidem, totam autem explicabo alias, obcaecati quaerat earum nisi, asperiores ea perspiciatis iusto neque. Odit molestias voluptatem laboriosam distinctio delectus consequatur, quo nemo nihil, deleniti perspiciatis nisi itaque similique accusantium facilis asperiores dicta veniam voluptatum numquam aliquam!</p>
+                                        <p class="mil-text-m mil-soft">It is possible. All banks in Nigeria now access the NIBSS E-dividend Portal where your executed E-dividend form makes it stress-free to receive your dividend payment into your bank account once it is approved by the Registrars or the bank. Please visit our website to download our e-mandate form complete the downloaded form, drop at any branch of your bank or contact us at registrars@apel.com.ng.</p>
                                     </div>
                                 </div>
 
+                                <div class="mil-accordion-group mil-up">
+                                    <div class="mil-accordion-menu">
+                                        <h5>Can I have my dividends converted to shares instead of cash?</h5>
+
+                                        <div class="mil-accordion-icon"><i class="fas fa-chevron-up"></i></div>
+                                    </div>
+                                    <div class="mil-accordion-content">
+                                        <p class="mil-text-m mil-soft">By way of traditional scrip scheme, the cash dividend is not paid to holders instead shares are allotted to participating holders and share certificates sent to them on the payment date.</p>
+                                    </div>
+                                </div>
+
+
+                                <div class="mil-accordion-group mil-up">
+                                    <div class="mil-accordion-menu">
+                                        <h5>How long does it take for me to receive my dividend after processing the e-dividend mandate form?</h5>
+
+                                        <div class="mil-accordion-icon"><i class="fas fa-chevron-up"></i></div>
+                                    </div>
+                                    <div class="mil-accordion-content">
+                                        <p class="mil-text-m mil-soft">It takes ten (10) working days after approval on NIBSS for you to receive your outstanding dividend.</p>
+                                    </div>
+                                </div>
+                                <div class="mil-accordion-group mil-up">
+                                    <div class="mil-accordion-menu">
+                                        <h5>I have found an old dividend warrant unclaimed, what can I do?</h5>
+
+                                        <div class="mil-accordion-icon"><i class="fas fa-chevron-up"></i></div>
+                                    </div>
+                                    <div class="mil-accordion-content">
+                                        <p class="mil-text-m mil-soft">The warrant is no longer in use. Kindly visit our website to download our e-mandate form complete the downloaded form, attached the old warrant and drop at our office or with your stockbrokers.</p>
+                                    </div>
+                                </div>
+                                <div class="mil-accordion-group mil-up">
+                                    <div class="mil-accordion-menu">
+                                        <h5>What is the difference between dividend and interest payments?</h5>
+
+                                        <div class="mil-accordion-icon"><i class="fas fa-chevron-up"></i></div>
+                                    </div>
+                                    <div class="mil-accordion-content">
+                                        <p class="mil-text-m mil-soft">Dividend are a portion of a company’s profit that is paid to the shareholders, that is, the owners of the company and its varies in their amount depending on how profitable the company is, while Interest is paid by the company on money it has borrowed and is usually paid in arrears at the rates and times specified in accordance with the terms and conditions.</p>
+                                    </div>
+                                </div>
                             </div>
+
+
+<br>
+<h2 id="certificates">Certificates</h2>
+<div class="mil-accordion" >
+
+    <div class="mil-accordion-group mil-up">
+        <div class="mil-accordion-menu">
+            <h5>How can I find out how many shares/units I have since I bought the shares?</h5>
+
+            <div class="mil-accordion-icon"><i class="fas fa-chevron-up"></i></div>
+
+        </div>
+        <div class="mil-accordion-content">
+            <p class="mil-text-m mil-soft">Kindly call our office line to speak with any of our customer care ,register on our shareholder portal <a href="https://myapel.com" target="_blank" style="color: green;">myapel.com</a> or send an email to registrars@apel.com.ng.
+                <br><br>
+               
+            </p>
+        </div>
+    </div>
+
+    <div class="mil-accordion-group mil-up">
+        <div class="mil-accordion-menu">
+            <h5>I have not received my share certificate. What should I do?</h5>
+
+            <div class="mil-accordion-icon"><i class="fas fa-chevron-up"></i></div>
+        </div>
+        <div class="mil-accordion-content">
+            <p class="mil-text-m mil-soft">Share certificates are no longer issued. Shares owned are dematerialized into your stockbroking account with Central Securities Clearing System (CSCS). Please contact us or your stockbroker</p>
+        </div>
+    </div>
+
+    <div class="mil-accordion-group mil-up">
+        <div class="mil-accordion-menu">
+            <h5>I have lost my share certificate, can I get a new one?</h5>
+
+            <div class="mil-accordion-icon"><i class="fas fa-chevron-up"></i></div>
+        </div>
+        <div class="mil-accordion-content">
+            <p class="mil-text-m mil-soft">Share certificates are no longer issued. See your stockbroker or visit CSCS to obtain your stock position.</p>
+        </div>
+    </div>
+
+    <div class="mil-accordion-group mil-up">
+        <div class="mil-accordion-menu">
+            <h5>I have reported a missing certificate but now I have found it. What should I do?</h5>
+
+            <div class="mil-accordion-icon"><i class="fas fa-chevron-up"></i></div>
+        </div>
+        <div class="mil-accordion-content">
+            <p class="mil-text-m mil-soft">Kindly take the certificate to your stockbroker for dematerialization into CSCS account.</p>
+        </div>
+    </div>
+
+    <div class="mil-accordion-group mil-up">
+        <div class="mil-accordion-menu">
+            <h5>I want to sell my shares. What can I do?</h5>
+
+            <div class="mil-accordion-icon"><i class="fas fa-chevron-up"></i></div>
+        </div>
+        <div class="mil-accordion-content">
+            <p class="mil-text-m mil-soft">The first step is to get a stockbroker and open a CSCS account where the certificate will be lodged and after which your sale mandate can be issued to the stockbroker.</p>
+        </div>
+    </div>
+
+
+    <div class="mil-accordion-group mil-up">
+        <div class="mil-accordion-menu">
+            <h5>I want to transfer my late father/mother shares to my name/shares. What should I do?</h5>
+
+            <div class="mil-accordion-icon"><i class="fas fa-chevron-up"></i></div>
+        </div>
+        <div class="mil-accordion-content">
+            <p class="mil-text-m mil-soft">Kindly provide and bring to our office the following listed documents<br> 1. 2 copies of the death certificate. <br>2. 2 copies of the letter of administration/probate (original required for sighting)<br> 3. All original share certificates and dividend warrants still in your possession.<br> 4. 2 copies of the will where applicable or a certificate of additional assets obtained from the probate division of High Court if the letter of administration does not indicate that the deceased acquired shares in any company. <br>5. Original Banker’s Confirmation of signature of the administration (s) duly authenticated by the bank.<br> 6. Valid identification of the administrator(s). <br>7. Newspaper publication of Gazette. (Note: In case you cannot bring these documents to our office, an authority letter can be given to your stockbroker to submit all these documents on your behalf which must be sighted and stamped by the broker.)</p>
+        </div>
+    </div>
+    <div class="mil-accordion-group mil-up">
+        <div class="mil-accordion-menu">
+            <h5>I want to transfer my shares to my child. What can I do?</h5>
+
+            <div class="mil-accordion-icon"><i class="fas fa-chevron-up"></i></div>
+        </div>
+        <div class="mil-accordion-content">
+            <p class="mil-text-m mil-soft">Kindly see your stockbroker.</p>
+        </div>
+    </div>
+    <div class="mil-accordion-group mil-up">
+        <div class="mil-accordion-menu">
+            <h5>Can I sell shares that are in my children’s names?</h5>
+
+            <div class="mil-accordion-icon"><i class="fas fa-chevron-up"></i></div>
+        </div>
+        <div class="mil-accordion-content">
+            <p class="mil-text-m mil-soft">Kindly see your stockbroker.</p>
+        </div>
+    </div>
+
+    <div class="mil-accordion-group mil-up">
+        <div class="mil-accordion-menu">
+            <h5>How do I merge my different shareholdings into one account?</h5>
+
+            <div class="mil-accordion-icon"><i class="fas fa-chevron-up"></i></div>
+        </div>
+        <div class="mil-accordion-content">
+            <p class="mil-text-m mil-soft">Yes, it’s possible. Kindly visit our website to download Consolidation form or see your stockbroker.</p>
+        </div>
+    </div>
+</div>
+<br>
+<h2 id="genShareholding">General Shareholding</h2>
+<div class="mil-accordion" >
+
+    <div class="mil-accordion-group mil-up">
+        <div class="mil-accordion-menu">
+            <h5>How do I know the companies you are Registrars to?</h5>
+
+            <div class="mil-accordion-icon"><i class="fas fa-chevron-up"></i></div>
+
+        </div>
+        <div class="mil-accordion-content">
+            <p class="mil-text-m mil-soft">Kindly visit our website. registrars@apel.com.ng.
+                <br><br>
+               
+            </p>
+        </div>
+    </div>
+
+    <div class="mil-accordion-group mil-up">
+        <div class="mil-accordion-menu">
+            <h5>I changed my address, how do I effect it in your record?</h5>
+
+            <div class="mil-accordion-icon"><i class="fas fa-chevron-up"></i></div>
+        </div>
+        <div class="mil-accordion-content">
+            <p class="mil-text-m mil-soft">Kindly write a letter to us indicating the old and the new address with your signature or visit our website and download the change of address form.</p>
+        </div>
+    </div>
+
+    <div class="mil-accordion-group mil-up">
+        <div class="mil-accordion-menu">
+            <h5>I have changed my name, how do I effect it on my shareholding in your record?</h5>
+
+            <div class="mil-accordion-icon"><i class="fas fa-chevron-up"></i></div>
+        </div>
+        <div class="mil-accordion-content">
+            <p class="mil-text-m mil-soft">Please visit our office with the original copy of your sworn court affidavit, marriage certificate (in case of marriage), valid ID, newspaper publication. (Note: In case you cannot bring these documents to our office, an authority letter can be given to your stockbroker to submit all these documents on your behalf which must be sighted and stamped by the broker.)</p>
+        </div>
+    </div>
+
+    <div class="mil-accordion-group mil-up">
+        <div class="mil-accordion-menu">
+            <h5>There is a spelling error on my name, how can a correction be effected?</h5>
+
+            <div class="mil-accordion-icon"><i class="fas fa-chevron-up"></i></div>
+        </div>
+        <div class="mil-accordion-content">
+            <p class="mil-text-m mil-soft">Kindly visit our website and download correction of name form complete it and forward to us for necessary action.</p>
+        </div>
+    </div>
+
+    <div class="mil-accordion-group mil-up">
+        <div class="mil-accordion-menu">
+            <h5>What is BCR?</h5>
+
+            <div class="mil-accordion-icon"><i class="fas fa-chevron-up"></i></div>
+        </div>
+        <div class="mil-accordion-content">
+            <p class="mil-text-m mil-soft">BCR simply means Bankers Confirmation of signature required from your banker confirming your current signature to us.</p>
+        </div>
+    </div>
+
+
+
+
+                          
+                        </div>
+
+
+
+                <br>
+
+                <h2 id="genmeetings">General Meetings</h2>
+<div class="mil-accordion" >
+
+    <div class="mil-accordion-group mil-up">
+        <div class="mil-accordion-menu">
+            <h5>What is the Annual General Meeting?</h5>
+
+            <div class="mil-accordion-icon"><i class="fas fa-chevron-up"></i></div>
+
+        </div>
+        <div class="mil-accordion-content">
+            <p class="mil-text-m mil-soft">General Meetings: Most limited companies are required to hold an annual general meeting (AGM) of shareholders where decisions are taken on the company’s business. The main business of the AGM is repeated every year and it includes accepting the company’s accounts for the year and fixing the proportion of a company’s profits that will be paid back to shareholders as a dividend and any other business that benefit the company.
+                <br><br>
+               
+            </p>
+        </div>
+    </div>
+
+    <div class="mil-accordion-group mil-up">
+        <div class="mil-accordion-menu">
+            <h5>What is different between AGM and EGM?</h5>
+
+            <div class="mil-accordion-icon"><i class="fas fa-chevron-up"></i></div>
+        </div>
+        <div class="mil-accordion-content">
+            <p class="mil-text-m mil-soft">AGM (Annual General Meeting) is done yearly while EGM (Extra General Meeting) is an unpredicted event or decision that need immediate action.</p>
+        </div>
+    </div>
+
+    <div class="mil-accordion-group mil-up">
+        <div class="mil-accordion-menu">
+            <h5>If I cannot go to a general meeting. Can I vote?</h5>
+
+            <div class="mil-accordion-icon"><i class="fas fa-chevron-up"></i></div>
+        </div>
+        <div class="mil-accordion-content">
+            <p class="mil-text-m mil-soft">Yes, it’s possible, through our online voting on the day of AGM, or you can appoint someone as your proxy. Please complete the proxy form and dispatch to our office 48 hours before the meeting.</p>
+        </div>
+    </div>
+
+    <div class="mil-accordion-group mil-up">
+        <div class="mil-accordion-menu">
+            <h5>How can I receive shareholder communications electronically?</h5>
+
+            <div class="mil-accordion-icon"><i class="fas fa-chevron-up"></i></div>
+        </div>
+        <div class="mil-accordion-content">
+            <p class="mil-text-m mil-soft">Kindly download shareholder information update form on our website, complete and forward to us.</p>
+        </div>
+    </div>
+
+    <div class="mil-accordion-group mil-up">
+        <div class="mil-accordion-menu">
+            <h5>What happens if I change my e-mail address?</h5>
+
+            <div class="mil-accordion-icon"><i class="fas fa-chevron-up"></i></div>
+        </div>
+        <div class="mil-accordion-content">
+            <p class="mil-text-m mil-soft">Kindly download shareholder information update form on our website, complete and forward to us.</p>
+        </div>
+    </div>
+
+
+
+
+                          
                         </div>
                     </div>
                 </div>

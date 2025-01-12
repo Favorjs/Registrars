@@ -48,6 +48,112 @@ Developer:	millerDigitalDesign (https://themeforest.net/user/millerdigitaldesign
 main
 
 ------------------------------------------- */
+
+/* Map Container Styles */
+#map1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px auto; /* Center the map */
+    border-radius: 10px; /* Rounded corners */
+    border-top: 5px ; /* Top border */
+    border-bottom: 5px; /* Bottom border */
+    overflow: hidden; /* Ensure radius applies to iframe content */
+    width: 80%; /* Adjust width as necessary */
+    max-width: 1000px; /* Limit the maximum width */
+    background-color: #f9f9f9; /* Optional background color for contrast */
+}
+
+#map1 iframe {
+    border: none; /* Remove iframe border */
+    width: 100%; /* Ensure iframe spans container width */
+    height: 420px; /* Fixed height */
+    border-radius: inherit; /* Inherit container radius */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    #map1 {
+        width: 95%; /* Reduce width for smaller screens */
+    }
+
+    #map1 iframe {
+        height: 300px; /* Adjust height for mobile devices */
+    }
+}
+
+ /* Preheader Styles */
+.mil-preheader {
+    background-color: #f8f9fa;
+    padding: 10px 0;
+    border-bottom: 1px solid #e0e0e0;
+    width: 100%;
+   
+}
+
+.mil-preheader .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.mil-contact-info {
+    font-size: 14px;
+    color: #555;
+}
+
+.mil-contact-info span {
+    margin-right: 15px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.mil-contact-info i {
+    margin-right: 5px;
+    color:  #2a9d8f;
+}
+
+.mil-social-icons a {
+    margin-left: 10px;
+    color: #555;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.mil-social-icons a:hover {
+    color:  #2a9d8f;
+}
+
+/* Adjust the navigation panel */
+.mil-top-panel {
+   
+    margin-top: 20px; /* Adjust this based on the preheader's height */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .mil-preheader .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .mil-contact-info {
+        margin-bottom: 10px;
+    }
+
+    .mil-social-icons a {
+        margin-left: 5px;
+    }
+
+    .mil-top-panel {
+        margin-top: 70px; /* Adjust for mobile screens if preheader height increases */
+    }
+}
+
+
+
 html,
 body {
   padding: 0;

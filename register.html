@@ -29,6 +29,66 @@
 
 </head>
 
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+    .popup-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        display: none;
+        justify-content: center;
+        align-items: center;
+    }
+    .popup-form {
+        background: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        width: 100%;
+        max-width: 400px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        text-align: center;
+    }
+    .popup-form input {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+    .popup-form button {
+        width: 100%;
+        padding: 10px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    .popup-form button:hover {
+        background-color: #0056b3;
+    }
+    .close-popup {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 20px;
+        cursor: pointer;
+    }
+    .toggle-link {
+        display: inline-block;
+        margin-top: 10px;
+        color: #007bff;
+        cursor: pointer;
+        text-decoration: underline;
+    }
+</style>
+
 <body>
 
 
@@ -49,7 +109,23 @@
         <div class="progress-wrap active-progress"></div>
 
         <!-- top panel end -->
-            <div class="mil-top-panel">
+                <div class="mil-preheader">
+        <div class="container">
+            <div class="mil-contact-info">
+                <span><i class="fas fa-phone-alt"></i> 07046126698</span>
+                <span><i class="fas fa-envelope"></i> registrars@apel.ng</span>
+            </div>
+            <div class="mil-social-icons">
+                <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://x.com/apelng" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/apelng" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/company/apelng/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </div>
+    
+        <!-- top panel end -->
+        <div class="mil-top-panel">
             <div class="container">
                 <a href="index.html" class="mil-logo">
                     <img src="img/logo.png"  width="62%">
@@ -67,14 +143,14 @@
                         <li class="mil-has-children">
                             <a >Services</a>
 
-                            <ul>
-                                <li><a href="primary-market.html">Primary Market Services</a></li>
-                                <li><a href="investor-relations.html">Investor Relations</a></li>
-                                <li><a href="post-primary.html">Post Primary Market Services</a></li>
-                                <li><a href="employee-share.html">Employee Share Plan</a></li>
-                                <li><a href="e-fund.html">E-Fund Application</a></li>
-                                <li><a href="customer-experience.html">Customer Experience</a></li>
-                                <li><a href="drip.html">Dividend Reinvestment Plan (DRIP)</a></li>
+                           <ul>
+                                <li><a href="services/primary-market.html">Primary Market Services</a></li>
+                                <li><a href="services/investor-relations.html">Investor Relations</a></li>
+                                <li><a href="services/post-primary.html">Post Primary Market Services</a></li>
+                                <li><a href="services/employee-share.html">Employee Share Plan</a></li>
+                                <li><a href="services/e-fund.html">E-Fund Application</a></li>
+                                <li><a href="services/customer-experience.html">Customer Experience</a></li>
+                                <li><a href="services/drip.html">Dividend Reinvestment Plan (DRIP)</a></li>
                                 
                             </ul>
                         </li>
@@ -132,8 +208,9 @@
                     <div class="row align-items-center justify-content-center">
                         <div class="col-xl-8">
                             <div class="mil-banner-text mil-text-center">
-                                <div class="mil-text-m mil-mb-20">Register</div>
+                             
                                 <h1 class="mil-mb-60">Register with Apel:</h1>
+                                <div class="mil-text-m mil-mb-20">Register with us to protect what matters to you tthe most</div>
                                 <ul class="mil-breadcrumbs mil-center">
                                     <li><a href="index.html">Home</a></li>
                                     <li><a href="register.html">Register</a></li>
@@ -144,12 +221,15 @@
                 </div>
             </div>
             <!-- banner end -->
-
+            <button id="openPopup">Open Signup Form</button>
             <!-- register form -->
             <div class="mil-blog-list mip-p-0-160">
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-xl-5">
+                            <div class="popup-overlay" id="popupOverlay">
+                                <div class="popup-form">
+                                    <span class="close-popup" id="closePopup">&times;</span>
                             <form>
 
                                 <input class="mil-input mil-up mil-mb-15" type="text" placeholder="Full name">
@@ -170,6 +250,8 @@
                                 <p class="mil-text-xs mil-soft">By registering, you agree to our <a href="#." class="mil-accent">Terms and Conditions</a>. Your information is protected and will never be shared with third parties</p>
                             </form>
                         </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -181,7 +263,30 @@
         <!-- content end -->
     </div>
     <!-- wrapper end -->
+    <script>
+        const openPopup = document.getElementById('openPopup');
+        const closePopup = document.getElementById('closePopup');
+        const popupOverlay = document.getElementById('popupOverlay');
+        const loginOption = document.getElementById('loginOption');
 
+        openPopup.addEventListener('click', () => {
+            popupOverlay.style.display = 'flex';
+        });
+
+        closePopup.addEventListener('click', () => {
+            popupOverlay.style.display = 'none';
+        });
+
+        popupOverlay.addEventListener('click', (e) => {
+            if (e.target === popupOverlay) {
+                popupOverlay.style.display = 'none';
+            }
+        });
+
+        loginOption.addEventListener('click', () => {
+            alert('Redirect to Login Form'); // Replace with your login form functionality.
+        });
+    </script>
     <!-- jquery js -->
     <script src="js/plugins/jquery.min.js"></script>
 
