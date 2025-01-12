@@ -192,7 +192,7 @@ main
 
 /* Adjust the navigation panel */
 .mil-top-panel {
-   
+   position: fixed;
     margin-top: 50px; /* Adjust this based on the preheader's height */
    background-color: white;
 }
