@@ -191,9 +191,8 @@ main
 }
 
 /* Adjust the navigation panel */
-.mil-top-panel {
-   position: fixed;
-    margin-top: 50px; /* Adjust this based on the preheader's height */
+  .mil-top-panel {
+   
    background-color: white;
 }
 
@@ -1506,9 +1505,9 @@ banner
 .mil-banner.mil-banner-inner {
   height: auto;
   background-color: transparent;
-  min-height: 680px;
+  min-height: 480px;
   padding-top: 80px;
-  margin-top: 0;
+  margin-top: 50px;
 }
 .mil-banner.banner-short {
   padding-bottom: 80px;
@@ -2879,3 +2878,6 @@ footer.mil-footer-dark-2 .mil-footer-bottom {
 .mil-subscripe-form-footer button i.mil-dark {
   color: rgb(13, 81, 82);
 }/*# sourceMappingURL=style.css.map */
+
+
+
